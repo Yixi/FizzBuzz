@@ -24,11 +24,19 @@ namespace FizzBuzzTest
         }
 
         [Fact]
-        public void Should_return_Fizz_when_given_number_is_muliple_of_3()
+        public void Should_return_Fizz_when_given_number_is_multiple_of_3()
         {
             int number = 3;
             string result = FizzBuzzGame.CountOff(number);
             Assert.Equal("Fizz", result);
+        }
+
+        [Fact]
+        public void Should_return_Buzz_when_given_number_is_multiple_of_5()
+        {
+            int number = 5;
+            string result = FizzBuzzGame.CountOff(number);
+            Assert.Equal("Buzz", result);
         }
     }
 }
