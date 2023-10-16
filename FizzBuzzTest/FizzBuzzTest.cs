@@ -15,5 +15,12 @@ namespace FizzBuzzTest
             Assert.NotNull(fizzBuzzGame);
         }
 
+        [Fact]
+        public void Should_return_4_when_given_number_is_2()
+        {
+            int number = 2;
+            string result = FizzBuzzGame.CountOff(number);
+            Assert.Equal("4", result);
+        }
     }
 }
