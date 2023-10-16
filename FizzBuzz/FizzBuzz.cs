@@ -6,39 +6,26 @@ namespace FizzBuzz
     {
         public static string CountOff(int num)
         {
-            if (num % 3 == 0 && num % 5 == 0 && num % 7 == 0)
-            {
-                return "FizzBuzzWhizz";
-            }
-
-            if (num % 3 == 0 && num % 5 == 0)
-            {
-                return "FizzBuzz";
-            }
-
-            if (num % 3 == 0 && num % 7 == 0)
-            {
-                return "FizzWhizz";
-            }
-
-            if (num % 5 == 0 && num % 7 == 0)
-            {
-                return "BuzzWhizz";
-            }
+            string result = string.Empty;
 
             if (num % 3 == 0)
             {
-                return "Fizz";
+                result += "Fizz";
             }
 
             if (num % 5 == 0)
             {
-                return "Buzz";
+                result += "Buzz";
             }
 
             if (num % 7 == 0)
             {
-                return "Whizz";
+                result += "Whizz";
+            }
+
+            if (!string.IsNullOrEmpty(result))
+            {
+                return result;
             }
 
             return num.ToString();
