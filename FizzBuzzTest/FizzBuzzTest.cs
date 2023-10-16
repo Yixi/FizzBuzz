@@ -62,5 +62,13 @@ namespace FizzBuzzTest
             string result = FizzBuzzGame.CountOff(number);
             Assert.Equal("FizzWhizz", result);
         }
+
+        [Fact]
+        public void Should_return_BuzzWhizz_when_given_number_is_multiple_both_5_and_7()
+        {
+            int number = 35;
+            string result = FizzBuzzGame.CountOff(number);
+            Assert.Equal("BuzzWhizz", result);
+        }
     }
 }
